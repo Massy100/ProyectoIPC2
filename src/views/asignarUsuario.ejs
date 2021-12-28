@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/estiloIngresarUsuario.css">
+    <title>Asignar Usuario</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/moduloAdmin">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo<span class="logo__bold">Administrador</span>
+                    </h1>
+                </a>
+
+                <nav class="navegacion">
+
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Asignar Usuario</h2>
+            <div class="formulario">
+                <div class="contenedor-form">
+                    <form action="/asignarUsuario" method="post">
+                        <input name="usuario" id="usuario" type="text" placeholder="Ingrese Usuario">
+                        <br /><br />
+                        <input name="password" id="password" type="text" placeholder="Ingrese Contraseña">
+                        <br /><br />
+                        <select name="tipo">
+                            <option value="1">Administrador</option>
+                            <option value="2">Secretaria</option>
+                            <option value="3">Laboratorista</option>
+                        </select>
+                        <br /><br />
+                        <input name="dpi" id="dpi" type="number" placeholder="Ingrese DPI de Empleado">
+                        <br /><br />
+                        <div class="contenedor-boton">
+                            <div class="boton">
+                                <input type="submit" value="Asignar Usuario">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

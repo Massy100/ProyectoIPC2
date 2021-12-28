@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/estiloSecretaria.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/moduloSecretaria">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span class="logo__bold">Secretaría</span>
+                    </h1>
+                </a>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Consultar Examen</h2>
+            <div class="contenedor-datos">
+                <div class="datos">
+                    <label>Paciente: </label>
+                    <label>
+                        <%=datosPaciente.nombre +' '+ datosPaciente.apellido%>
+                    </label>
+                    <br />
+                    <label>CUI: </label>
+                    <label>
+                        <%=datosPaciente.cui%>
+                    </label>
+                    <br />
+                    <label>ID Examen: </label>
+                    <label>
+                        <%=datosPaciente.id_examen%>
+                    </label>
+                </div>
+            </div>
+            <div class="tabla">
+                <table>
+                    <tr>
+                        <td>Tipo Examen</td>
+                        <td>Precio</td>
+                    </tr>
+                    <% for(let i=0; i<datos.length; i++){ %>
+                        <tr>
+                            <td>
+                                <%=datos[i].tipoExamen%>
+                            </td>
+                            <td>
+                                <%='Q'+datos[i].precio%>
+                            </td>
+                        </tr>
+
+                        <% } %>
+                </table>
+            </div>
+
+        </div>
+    </header>
+</body>
+
+</html>

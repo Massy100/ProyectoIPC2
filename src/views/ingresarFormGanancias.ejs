@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/estiloIngresarUsuario.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/moduloAdmin">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo<span
+                            class="logo__bold">Administracion</span></h1>
+                </a>
+
+                <nav class="navegacion">
+
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Consultar Ganancias</h2>
+            <div class="formulario">
+                <div class="contenedor-form">
+                    <form action="/consultarGanancias" method="post">
+                        <label for="fecha1">Ganancias Entre</label>
+                        <input name="fecha1" id="fecha" type="date" placeholder="Ingrese DPI">
+                        <br /><br />
+                        <label for="fecha2">Y</label>
+                        <input name="fecha2" id="fecha" type="date" placeholder="Ingrese Nombre">
+                        <br /><br />
+                        <div class="contenedor-boton">
+                            <div class="boton">
+                                <input type="submit" value="Ingresar">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

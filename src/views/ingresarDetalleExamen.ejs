@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/estiloSecretaria.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/moduloSecretaria">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span class="logo__bold">Secretaría</span>
+                    </h1>
+                </a>
+                <nav class="navegacion">
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Detallar Examen</h2>
+            <div class="formulario">
+                <div class="contenedor-form">
+                    <form action="/agregarDetalleExamen" method="post">
+                        <label for="id_examen">ID Examen</label>
+                        <input name="id_examen" type="text" value="<%=examen%>" readonly>
+                        <br /><br />
+                        <label for="tipo_examen">Tipo de Examen</label>
+                        <br /><br />
+                        <select name="tipo_examen">
+                            <% for(let i=0; i<tipoExamen.length; i++){ %>
+                                <option value="<%=tipoExamen[i].id_tipo_examen%>"><%=tipoExamen[i].nombre%></option>
+                                <% } %>
+                        </select>
+                        <br /><br />
+                        <input type="submit" value="Ingresar Detalle">
+                    </form>
+                    <div class="boton">
+                        <nav>
+                            <a href="/moduloSecretaria">Finalizar Detalle</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

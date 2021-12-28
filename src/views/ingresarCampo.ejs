@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/estiloAdministrador.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/moduloAdmin">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span class="logo__bold">Administrador</span>
+                    </h1>
+                </a>
+
+                <nav class="navegacion">
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Ingresar Campo</h2>
+            <div class="formulario">
+                <div class="contenedor-form">
+                    <form action="/agregarCampo" method="post">
+                        <input name="nombre" id="nombre" type="text" placeholder="Ingrese Nombre">
+                        <br /><br />
+                        <label for="tipo_examen">Tipo Examen</label>
+                        <br /><br />
+                        <select name="tipo_examen">
+                            <% for(let i=0; i<tipo.length; i++){ %>
+                                <option value="<%=tipo[i].id_tipo_examen%>"><%=tipo[i].nombre%></option>
+                            <% } %>
+                        </select>
+                        <br /><br />
+                        <div class="contenedor-boton">
+                            <div class="boton">
+                                <input type="submit" value="Ingresar">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/estiloLaboratorista.css">
+    <title>Detallar Resultado</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/moduloLaboratorista">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span
+                            class="logo__bold">Laboratorista</span>
+                    </h1>
+                </a>
+
+                <nav class="navegacion">
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Ingresar Detalle Resultado</h2>
+            <div class="formulario">
+                <div class="contenedor-form">
+                    <form action="/agregarDetalleresultado" method="post">
+                        <label for="resultado">ID Resultado</label>
+                        <input name="resultado" type="text" value="<%=resultado%>">
+                        <br /><br />
+                        <label for="resultado">ID Examen</label>
+                        <input name="idExamen" type="text" value="<%=examen%>">
+                        <div class="tabla-opciones">
+                            <table>
+                                <% for(let i=0; i<data.length; i++){ %>
+                                    <tr>
+                                        <td><input name="campo" type="radio" value="<%=data[i].id_campo%>"></td>
+                                        <td>
+                                            <%=data[i].nombreCampo%>
+                                        </td>
+                                        <td><%=data[i].nombreTipoExamen%></td>
+                                    </tr>
+                                    <% } %>
+                            </table>
+                        </div>
+                        <br/><br/>
+                        <input name="descripcion" id="descripcion" type="textr" placeholder="Ingrese Descripcion">
+                        <br /><br />
+                        <input class="boton" type="submit" value="Ingresar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

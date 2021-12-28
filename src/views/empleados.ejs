@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/estiloAdministrador.css">
+
+    <title>Empleados</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/moduloAdmin">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span
+                            class="logo__bold">Administración</span>
+                    </h1>
+                </a>
+                <nav class="navegacion">
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Empleados</h2>
+        </div>
+        <div class="tabla">
+            <table>
+                <tr>
+                    <td>DPI</td>
+                    <td>Nombre</td>
+                    <td>Apellido</td>
+                    <td>Telefono</td>
+                    <td>Correo</td>
+                    <td>Accion</td>
+                </tr>
+                <% for(let i=0; i<empleados.length; i++){ %>
+                    <tr>
+                        <td>
+                            <%=empleados[i].dpi%>
+                        </td>
+                        <td>
+                            <%=empleados[i].nombre%>
+                        </td>
+                        <td>
+                            <%=empleados[i].apellido%>
+                        </td>
+                        <td>
+                            <%=empleados[i].correo%>
+                        </td>
+                        <td>
+                            <%=empleados[i].telefono%>
+                        </td>
+                        <td>
+                            <nav class="opciones">
+                                <a class="editar" href="/formEditarEmpleado/<%=empleados[i].dpi%>">Editar</a>
+                                <a class="eliminar" href="/eliminarEmpleado/<%=empleados[i].dpi%>">Eliminar</a>
+                            </nav>
+                        </td>
+                    </tr>
+                    <% } %>
+            </table>
+        </div>
+    </header>
+</body>
+
+</html>

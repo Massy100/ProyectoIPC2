@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/estiloIngresarUsuario.css">
+    <title>Ingreso de Empleado</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/moduloAdmin">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo<span
+                            class="logo__bold">Administracion</span></h1>
+                </a>
+
+                <nav class="navegacion">
+
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Ingresar Empleado</h2>
+            <div class="formulario">
+                <div class="contenedor-form">
+                    <form action="/agregarEmpleado" method="post">
+                        <input name="dpi" id="dpi" type="number" placeholder="Ingrese DPI">
+                        <br /><br />
+                        <input name="nombre" id="nombre" type="text" placeholder="Ingrese Nombre">
+                        <br /><br />
+                        <input name="apellido" id="apellido" type="text" placeholder="Ingrese Apellido">
+                        <br /><br />
+                        <input name="telefono" id="telefono" type="number" placeholder="Ingrese Teléfono">
+                        <br /><br />
+                        <input name="email" id="correo" type="email" placeholder="Ingrese Correo">
+                        <br /><br />
+                        <div class="contenedor-boton">
+                            <div class="boton">
+                                <input type="submit" value="Ingresar">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

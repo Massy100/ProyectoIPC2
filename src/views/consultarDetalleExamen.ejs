@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/estiloSecretaria.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/moduloSecretaria">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span class="logo__bold">Secretaría</span>
+                    </h1>
+                </a>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Consultar Examen</h2>
+            <div class="formulario">
+                <div class="contenedor-form">
+                    <form action="/consultarExamen" method="post">
+                        <input name="idExamen" id="idExamen" type="number" placeholder="Ingrese ID Examen">
+                        <br /><br />
+                        <div class="contenedor-boton">
+                            <div class="boton">
+                                <input type="submit" value="Consultar Examen">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

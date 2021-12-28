@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../css/estiloAdministrador.css">
+    <title>Editar Medico</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="/moduloAdmin">
+                    <h1 class="logo__nombre no-margin centrar-texto">Módulo <span class="logo__bold">Administración</span>
+                    </h1>
+                </a>
+
+                <nav class="navegacion">
+                </nav>
+            </div>
+        </div>
+        <div class="header__texto">
+            <h2 class="no-margin">Actualizar Datos de Médico</h2>
+            <div class="formulario">
+                <div class="contenedor-form">
+                    <form action="/editarMedico" method="post">
+                        <input name="id" id="id" type="text" placeholder="Ingrese ID" value="<%=medico.id_medico%>" readonly>
+                        <br /><br />
+                        <input name="nombre" id="nombre" type="text" placeholder="Ingrese Nombre" value="<%=medico.nombre%>">
+                        <br /><br />
+                        <input name="apellido" id="apellido" type="text" placeholder="Ingrese Apellido" value="<%=medico.apellido%>">
+                        <br /><br />
+                        <input name="telefono" id="telefono" type="number" placeholder="Ingrese Teléfono" value="<%=medico.telefono%>">
+                        <br /><br />
+                        <input name="correo" id="correo" type="email" placeholder="Ingrese Email" value="<%=medico.correo%>">
+                        <br /><br />
+                        <div class="contenedor-boton">
+                            <div class="boton">
+                                <input type="submit" value="Actualizar Datos">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>

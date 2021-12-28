@@ -1,0 +1,28 @@
+const express = require('express');
+const controlador = require('../controladores/ControladorAdministrador');
+const ruta = express.Router();
+
+ruta.get('/moduloAdmin', controlador.login);
+ruta.post('/agregarEmpleado',controlador.ingresarEmpleado);
+ruta.get('/formEmpleado',controlador.accesarEmpleado);
+ruta.get('/formUsuario', controlador.accesarUsuario);
+ruta.post('/asignarUsuario',controlador.asignarUsuario);
+ruta.get('/formMedico', controlador.accesarMedico);
+ruta.post('/agregarMedico',controlador.ingresarMedico);
+ruta.get('/vistaEmpleados',controlador.accesarEmpleados);
+ruta.get('/vistaMedicos',controlador.accesarMedicos);
+ruta.get('/formTipoExamen',controlador.accesarTipoExamen);
+ruta.post('/agregarTipoExamen',controlador.ingresarTipoExamen);
+ruta.get('/formCampo',controlador.accesarCampo);
+ruta.post('/agregarcampo',controlador.ingresarCampo);
+ruta.get('/formEditarEmpleado/:dpi',controlador.accesarEditarempleado);
+ruta.post('/editarEmpleado',controlador.editarEmpleado);
+ruta.get('/eliminarEmpleado/:dpi',controlador.eliminarEmpleado);
+ruta.get('/formEditarMedico/:id',controlador.accesarEditarMedico);
+ruta.post('/editarMedico',controlador.editarMedico);
+ruta.get('/moduloReportes',controlador.accesarReportes);
+ruta.get('/formReporteGanancias',controlador.accesarFormGanancias);
+ruta.post('/consultarGanancias',controlador.consultarGanancias);
+ruta.get('/formReporteExamenesReferidos',controlador.accesarFormExamenes);
+ruta.post('/consultarExamenesReferidos',controlador.consultarExamenesReferidos);
+module.exports = ruta;
